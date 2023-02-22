@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useEffect} from 'react';
 
 function App() {
-  let showDate = new Date("January 1, 2024 00:00");
+  let showDate = new Date("January 1, 2024 00:00"); //
   const [showTime, setShowTime] = useState([]);
   const [showDiscussion, setShowDiscussion] = useState(false);
   
@@ -43,9 +43,12 @@ function App() {
 
   return (
     <div className="d-flex row justify-content-center align-content-center align-items-center vh-100 text-center">
-      <h1 className="display-5 fw-bold m-3"><span className='opaque'>It's the final countdown!</span></h1>
+      <h1 className="display-5 fw-bold m-3"><span className='opaque'>{showDiscussion ? `Happy New Year! Happy New Year!` : `It's the final countdown!`}</span></h1>
+      <br></br>
       <div className='d-flex p-4 m-3 flex-row flex-wrap justify-content-evenly align-items-center'>
-        <h3 id="nextMtg" className='fw-bold'><span className='opaque'>{showDiscussion ? 'Discussing the book at the moment 😁' : <span id='mtgString'>{showTime.days} days, {showTime.hours} hours, {showTime.minutes} minutes, <span className='pulse'>{showTime.seconds}</span> seconds</span>}</span></h3>
+        <br></br>
+        <h3 id="nextMtg" className='fw-bold opaque'>{showDiscussion ? <span>May we all have a vision now and then <br></br> Of a world where every neighbour is a friend</span> : <span>{showTime.days} days, {showTime.hours} hours, {showTime.minutes} minutes, <span className='pulse'>{showTime.seconds}</span> seconds</span>}</h3>
+        <br></br>
       </div>
     </div>
   );
