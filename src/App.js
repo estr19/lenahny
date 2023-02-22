@@ -42,7 +42,7 @@ function App() {
   });
 
   return (
-    <div className="d-flex row justify-contentcenter align-content-center align-items-center vh-100 text-center">
+    <div className="d-flex row justify-content-center align-content-center align-items-center vh-100 text-center">
       <h1 className="display-5 fw-bold m-3"><span className='opaque'>It's the final countdown!</span></h1>
       <div className='d-flex p-4 m-3 flex-row flex-wrap justify-content-evenly align-items-center'>
         <h3 id="nextMtg" className='fw-bold'><span className='opaque'>{showDiscussion ? 'Discussing the book at the moment 😁' : <span id='mtgString'>{showTime.days} days, {showTime.hours} hours, {showTime.minutes} minutes, <span className='pulse'>{showTime.seconds}</span> seconds</span>}</span></h3>
